@@ -1,0 +1,220 @@
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+.hidden{
+  display: none !important;
+}
+.tooltip {
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 4em;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 118%;
+  left: 192%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  padding: 0.5em 1em;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.delete-wrapper{
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+/* placeholder for document */
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: darkgrey;
+}
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: white;
+}
+.heading{
+  font-size: 20px;
+  font-weight: 100;
+  padding: 0.5em;
+  margin: 5px 0 0 0;
+  background-color: #6687f5;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+.delete-btn:hover{
+  color: #990000;
+}
+/* selectRecordMenu */
+.edit-block{
+  display:flex;
+}
+.center-column{}
+.record-name {
+  color: gray;
+  padding-bottom: 7px;
+}
+.panel-wrapper{
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.menu{
+  padding: 15px;
+  margin: 5px 0;
+  width: 794px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  height: auto;
+  position: relative;
+}
+.menu__input{
+  border: 1px solid #dfdfdf;
+  height: 35px;
+  background-color: whitesmoke;
+  margin:0;
+  outline: none;
+  box-sizing: content-box;;
+  font-size: 12px;
+}
+.select-record{
+  width: 154px;
+  padding-left: 0.5em;
+}
+.select-record-label{
+  display: block;
+  line-height: 22px;
+  color: gray;
+  font-size: 15px;
+}
+.menu__button{
+  cursor: pointer;
+}
+.menu__button:disabled{
+  color: darkgray;
+  border: 1px solid #efefef;
+  cursor: unset;
+}
+.menu__button:enabled:hover{
+  /*background-color: #dfdfdf;*/
+  background-color: #6687f5;
+  color: white;
+}
+.edit-buttons{}
+.edit-button{
+  margin-right: 3px;
+  padding: 0 9px;
+}
+.control-buttons{
+  display: flex;
+}
+.control-button{
+  line-height: 35px;
+  padding: 0 20px;
+  position: relative;
+}
+.control-button_select-menu{
+  margin-top: 22px;
+}
+.control-button_save{
+  margin-right: 4px;
+}
+.control-button_edit{
+  margin-left: 4px;
+}
+.control-button_new{
+  margin-right: 4px;
+}
+.btn-text {
+  position: relative;
+  padding-left: 15px;
+}
+.btn-icon{
+  position: absolute;
+}
+.btn-icon_select-menu{
+  left: 17px;
+}
+.btn-icon_edit-menu{
+  left: 16px;
+}
+.btn-icon_doc{
+  font-size: 23px;
+  line-height: 43px;
+  color: floralwhite;
+}
+.btn-icon_edit{
+  font-size: 14px;
+  top: 2px;
+}
+.btn-icon_new{
+  font-size: 17px;
+  top: 2px;
+}
+.btn-icon_save{
+  font-size: 17px;
+  top: 2px;
+  left: 15px;
+}
+.btn-icon_delete{
+  font-size: 16px;
+  top: 2px;
+}
+.main-content{
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  overflow-y: scroll;
+  position: relative;
+  white-space: normal;
+}
+.page{
+  background-color: rgb(255, 255, 255);
+  width: 794px;
+  height: 1123px;
+  margin: 50px 0;
+  box-shadow: 0 0 0 0.75pt #d1d1d1, 0 0 3pt 0.75pt #ccc;
+  padding: 96px;
+  box-sizing: border-box;
+  word-break: break-all;
+  outline: none;
+}
+.page:not([contenteditable=""]):not([contenteditable="true"]){
+  color: #6687f5;
+  background-color: #f9f9f9;
+}

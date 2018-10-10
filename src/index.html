@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Текстовый редактор</title>
+</head>
+<body>
+  <div id="header" class="header">
+    <div class="center-column">
+      <h1 class="heading">Текстовый редактор с локальным хранилищем</h1>
+      <div id="selectRecordMenu" class="menu panel-wrapper hidden">
+        <div class="edit-block">
+          <div>
+            <label class="select-record-label" for="selectRecord">Запись</label>
+            <select id="selectRecord" class="menu__input select-record"></select>
+          </div>
+          <button id="editRecord" class="menu__input menu__button control-button control-button_select-menu control-button_edit">
+            <ion-icon class="btn-icon btn-icon_select-menu btn-icon_edit" name="create"></ion-icon>
+            <span class="btn-text">Редактировать</span>
+          </button>
+        </div>
+        <div class="control-buttons">
+          <button id="newRecord" class="menu__input menu__button control-button control-button_select-menu control-button_new">
+            <ion-icon class="btn-icon btn-icon_select-menu btn-icon_new" name="add"></ion-icon>
+            <span class="btn-text">Новая запись</span>
+          </button>
+          <button id="deleteAllRecords" class="menu__input menu__button control-button control-button_select-menu control-button_new">
+            <ion-icon name="trash" class="btn-icon btn-icon_edit-menu btn-icon_close"></ion-icon>
+            <span class="btn-text">Удалить все записи</span>
+          </button>
+        </div>
+      </div>
+      <div id="editRecordMenu" class="menu hidden">
+        <div class="delete-wrapper">
+          <div class="tooltip">
+            <ion-icon id="cancelBtn" class="delete-btn" name="close"></ion-icon>
+            <span class="tooltiptext">Закрыть</span>
+          </div>
+        </div>
+        <div id="recordName" class="record-name">
+          Новая запись
+        </div>
+        <div class="panel-wrapper">
+          <div class="edit-buttons">
+            <button id="undo" class="menu__input menu__button edit-button edit-button_undo" disabled="true">
+              <ion-icon name="undo"></ion-icon>
+            </button>
+            <button id="redo" class="menu__input menu__button edit-button edit-button_redo" disabled="true">
+              <ion-icon name="redo"></ion-icon>
+            </button>
+          </div>
+          <div class="control-buttons">
+            <button id="saveBtn" class="menu__input menu__button control-button control-button_save" disabled="true">
+              <ion-icon name="save" class="btn-icon btn-icon_edit-menu btn-icon_save" ></ion-icon>
+              <span class="btn-text">Сохранить</span>
+            </button>
+            <button id="deleteRecord" class="menu__input menu__button control-button" disabled="true">
+              <ion-icon name="trash" class="btn-icon btn-icon_edit-menu btn-icon_delete"></ion-icon>
+              <span class="btn-text">Удалить запись</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main-content" class="main-content">
+    <div id="pageInput" class="page" contenteditable="true" placeholder="Напшите что-нибудь здесь."></div>
+  </div>
+  <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+</body>
+</html>
